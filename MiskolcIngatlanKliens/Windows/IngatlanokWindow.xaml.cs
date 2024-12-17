@@ -23,5 +23,20 @@ namespace MiskolcIngatlanKliens.Windows
         {
             InitializeComponent();
         }
+
+        private void btnUj_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnModosit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btntorol_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
