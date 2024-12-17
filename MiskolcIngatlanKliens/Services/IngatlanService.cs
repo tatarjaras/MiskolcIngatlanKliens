@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace MiskolcIngatlanKliens.Services
@@ -23,6 +24,15 @@ namespace MiskolcIngatlanKliens.Services
                 return new List<Ingatlan>();
             }
             
+        }
+
+
+        public async static Task<string> Insert(HttpClient client, Ingatlan ujingatlan)
+        {
+            string uj =JsonSerializer.Serialize(ujingatlan, JsonSerializerOptions.Default);
+            string url = $"{client.BaseAddress}Ingatlan";
+            var request = new StringContent(uj, Encoding.UTF8, "application/json");
+            var response=await client
         }
     }
 }
