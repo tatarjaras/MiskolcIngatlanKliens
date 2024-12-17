@@ -11,9 +11,9 @@
             <RowDefinition Height="30"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Menu Grid.Row="0">
-            <MenuItem Header="Ingatlanok" Click="MenuItem_Click"/>
-            <MenuItem Header="Ügyintezok" Click="MenuItem_Click_1"/>
+        <Menu Grid.Row="0" VerticalAlignment="Center">
+            <MenuItem Header="Ingatlanok" Click="IngatlanokablakNyit"/>
+            <MenuItem Header="Ügyintezok" Click="UgyintezokAblakNyit"/>
 
 
         </Menu>
