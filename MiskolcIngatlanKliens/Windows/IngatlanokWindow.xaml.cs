@@ -36,9 +36,10 @@ namespace MiskolcIngatlanKliens.Windows
             Feltolt();
         }
 
-        private void BtnUj_Click(object sender, RoutedEventArgs e)
+        private async void BtnUj_Click(object sender, RoutedEventArgs e)
         {
-
+            Ingatlan
+            await IngatlanService.InserNew(sajatKliens,)
         }
 
         private void BtnModosit_Click(object sender, RoutedEventArgs e)
