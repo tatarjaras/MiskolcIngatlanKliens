@@ -33,8 +33,7 @@ namespace MiskolcIngatlanKliens.Windows
         public IngatlanokWindow()
         {
             InitializeComponent();
-            ingatlanok=IngatlanService.GetAll(sajatKliens).Result;
-            dgrIngatlanok.ItemsSource = ingatlanok;
+            Feltolt();
         }
 
         private void BtnUj_Click(object sender, RoutedEventArgs e)
@@ -51,7 +50,12 @@ namespace MiskolcIngatlanKliens.Windows
         {
 
         }
-
+        private async void Feltolt()
+        {
+            ingatlanok=await IngatlanService.GetAll(sajatKliens);
+            Task.Delay(1000).Wait();
+            dgrIngatlanok.ItemsSource=ingatlanok;
+        }
 
     }
 }
