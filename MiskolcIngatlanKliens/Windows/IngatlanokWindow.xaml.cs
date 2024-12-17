@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -11,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using static System.Net.WebRequestMethods;
 
 namespace MiskolcIngatlanKliens.Windows
 {
@@ -19,24 +21,31 @@ namespace MiskolcIngatlanKliens.Windows
     /// </summary>
     public partial class IngatlanokWindow : Window
     {
+
+        private HttpClient sajatKliens = new HttpClient()
+        {
+            BaseAddress=new Uri("http://localhost:5000")
+        };
         public IngatlanokWindow()
         {
             InitializeComponent();
         }
 
-        private void btnUj_Click(object sender, RoutedEventArgs e)
+        private void BtnUj_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void btnModosit_Click(object sender, RoutedEventArgs e)
+        private void BtnModosit_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void btntorol_Click(object sender, RoutedEventArgs e)
+        private void Btntorol_Click(object sender, RoutedEventArgs e)
         {
 
         }
+
+
     }
 }

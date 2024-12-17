@@ -46,9 +46,9 @@
             <Label Content="ügyintezo"/>
             <ComboBox x:Name="cbxugyintezo"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button x:Name="btnUj" Content="Új ingatlan" Click="btnUj_Click"/>
-                <Button x:Name="btnModosit" Content="Módosítás" Click="btnModosit_Click"/>
-                <Button x:Name="btntorol" Content="Törlés" Click="btntorol_Click"/>
+                <Button x:Name="btnUj" Content="Új ingatlan" Click="BtnUj_Click"/>
+                <Button x:Name="btnModosit" Content="Módosítás" Click="BtnModosit_Click"/>
+                <Button x:Name="btntorol" Content="Törlés" Click="Btntorol_Click"/>
             </StackPanel>
 
         </StackPanel>
