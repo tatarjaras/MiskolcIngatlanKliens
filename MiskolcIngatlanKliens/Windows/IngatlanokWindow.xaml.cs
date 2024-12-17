@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MiskolcIngatlanKliens.Models;
+using MiskolcIngatlanKliens.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -26,9 +28,13 @@ namespace MiskolcIngatlanKliens.Windows
         {
             BaseAddress=new Uri("http://localhost:5000")
         };
+
+        private List<Ingatlan> ingatlanok = new List<Ingatlan>();
         public IngatlanokWindow()
         {
             InitializeComponent();
+            ingatlanok=IngatlanService.GetAll(sajatKliens).Result;
+            dgrIngatlanok.ItemsSource = ingatlanok;
         }
 
         private void BtnUj_Click(object sender, RoutedEventArgs e)

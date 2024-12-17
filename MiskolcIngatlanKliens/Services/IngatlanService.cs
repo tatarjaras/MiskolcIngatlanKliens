@@ -13,7 +13,15 @@ namespace MiskolcIngatlanKliens.Services
     {
         public static async Task<List<Ingatlan>> GetAll(HttpClient client)
         {
-            return await client.GetFromJsonAsync<List<Ingatlan>>("Ingatlan");
+            List<Ingatlan> result = await client.GetFromJsonAsync<List<Ingatlan>>("Ingatlan");
+            if (result is not null)
+            {
+                return result;
+            }
+            else
+            {
+                return new List<Ingatlan>();
+            }
             
         }
     }
