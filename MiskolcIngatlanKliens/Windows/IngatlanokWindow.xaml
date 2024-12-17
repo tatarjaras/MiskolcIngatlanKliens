@@ -25,7 +25,7 @@
             <Label Content="Képnév"/>
             <TextBox x:Name="tbxKepNev"/>
             <Label Content="ügyintezo"/>
-            <TextBox x:Name="tbxugyintezo"/>
+            <ComboBox x:Name="cbxugyintezo"/>
 
         </StackPanel>
         
