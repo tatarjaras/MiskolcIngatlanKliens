@@ -31,8 +31,10 @@ namespace MiskolcIngatlanKliens.Services
         {
             string uj =JsonSerializer.Serialize(ujingatlan, JsonSerializerOptions.Default);
             string url = $"{client.BaseAddress}Ingatlan";
-            var request = new StringContent(uj, Encoding.UTF8, "application/json");
-            var response=await client
+            var content = new StringContent(uj, Encoding.UTF8, "application/json");
+            var response=await client.PostAsync(url, content);
+            var valasz=await response.Content.ReadAsStringAsync();
+            return valasz;
         }
     }
 }
