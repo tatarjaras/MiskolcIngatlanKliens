@@ -52,7 +52,7 @@
             </StackPanel>
 
         </StackPanel>
-        
-        
+        <DataGrid x:Name="dgrIngatlanok" Grid.Column="1"/>
+
     </Grid>
 </Window>
